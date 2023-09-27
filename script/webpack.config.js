@@ -43,6 +43,28 @@ module.exports = {
           'less-loader',
         ],
       },
+      {
+        test: /\.(png|jpe?g|gif|svg|webp)$/i,
+        type: 'asset',
+        /**
+         * 限制打包图片的大小;
+         * 大于或等于 8192Byte, 按照相应的文件名和路径打包图片;
+         * 小于 8192Byte, 将图片转成 base64 格式字符串
+         * */
+        parser: { dataUrlCondition: { maxSize: 25 * 1024 } },
+        /**
+         * img: 图片打包的文件夹
+         * [name].[ext]: 设定图片按照本来的文件名和扩展名打包, 不用进行额外编码
+         * [name].[hash:8].[ext]: 一个项目中如果两个文件夹中的图片重名, 打包图片就会被覆盖, 加上 hash 值的前八位作为图片名, 可以避免重名;
+         * */
+        generator: { filename: 'imgs/[name].[hash:8][ext]' },
+      },
+      {
+        test: /\.(eot|ttf|woff|woff2)$/i,
+        type: 'asset',
+        parser: { dataUrlCondition: { maxSize: 25 * 1024 } },
+        generator: { filename: 'fonts/[name].[hash:8][ext]' },
+      },
     ],
   },
   optimization: {
