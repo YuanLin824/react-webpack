@@ -1,0 +1,24 @@
+{
+  "name": "react-cli-webpack",
+  "version": "1.0.0",
+  "description": "React scaffolding built using webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "YuanLin",
+  "license": "ISC",
+  "dependencies": {
+    "react": "~18.2.0",
+    "react-dom": "~18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "~18.2.23",
+    "@types/react-dom": "~18.2.7",
+    "typescript": "~5.2.2",
+    "webpack": "~5.88.2",
+    "webpack-cli": "~5.1.4",
+    "webpack-dev-server": "~4.15.1",
+    "webpack-merge": "~5.9.0"
+  }
+}
