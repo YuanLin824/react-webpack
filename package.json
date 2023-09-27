@@ -4,8 +4,8 @@
   "description": "React scaffolding built using webpack",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack serve -c scripts/webpack.dev.js",
-    "build": "cross-env NODE_ENV=production webpack -c scripts/webpack.prod.js"
+    "dev": "cross-env NODE_ENV=development webpack serve -c script/webpack.dev.js",
+    "build": "cross-env NODE_ENV=production webpack -c script/webpack.prod.js"
   },
   "author": "YuanLin",
   "license": "ISC",

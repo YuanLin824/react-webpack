@@ -2,6 +2,7 @@
 const { merge } = require('webpack-merge')
 const base = require('./webpack.config.js')
 
+/** @type {import('webpack').Configuration} */
 module.exports = merge(base, {
   mode: 'development', // 开发模式
   devServer: {
