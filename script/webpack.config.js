@@ -4,7 +4,7 @@ const path = require('path')
 
 /** @type {import('webpack').Configuration} */
 module.exports = {
-  entry: path.resolve(__dirname, '../index.tsx'),
+  entry: path.resolve(__dirname, '../src/index.tsx'),
   output: {
     path: path.resolve(__dirname, '../dist'), // 打包后的代码放在dist目录下
     filename: '[name].[hash:8].js', // 打包的文件名
@@ -44,6 +44,6 @@ module.exports = {
   },
   plugins: [
     /** 使用自定义模板 */
-    new HtmlWebpackPlugin({ template: path.resolve(__dirname, '../index.html') }),
+    new HtmlWebpackPlugin({ template: path.resolve(__dirname, '../public/index.html') }),
   ],
 }
