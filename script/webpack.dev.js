@@ -5,8 +5,5 @@ const base = require('./webpack.config.js')
 /** @type {import('webpack').Configuration} */
 module.exports = merge(base, {
   mode: 'development', // 开发模式
-  devServer: {
-    open: true, // 编译完自动打开浏览器
-    port: 8080,
-  },
+  devServer: { open: false, port: 8080 },
 })
