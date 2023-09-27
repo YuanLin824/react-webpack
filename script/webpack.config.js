@@ -1,4 +1,5 @@
 /** webpack 公用配置 */
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
 /** @type {import('webpack').Configuration} */
@@ -41,4 +42,8 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    /** 使用自定义模板 */
+    new HtmlWebpackPlugin({ template: path.resolve(__dirname, '../index.html') }),
+  ],
 }
